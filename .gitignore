@@ -1,0 +1,9 @@
+# specific files
+.DS_STORE
+LOC_val_solution.csv
+train_cls.txt
+
+# folders
+.vscode
+__pycache__
+output
