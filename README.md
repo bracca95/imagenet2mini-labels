@@ -1,5 +1,5 @@
 # Imagenet to miniimagenet labels
-Provide three files
+The program provides three files
 1. `hide_images.txt` list of images in the val+test set of miniimagenet, 
 2. `hide_labels.txt` list of the 16+20 labels in the val+test set of miniimagenet,
 3. `ilsvrc_cleaned.txt` the imagenet-1k train set image list stripped of ALL the samples that belong to the 16+20 val+test classes of miniimagenet.
@@ -16,3 +16,8 @@ In addition, I was able to find a [miniimagenet dataset version](https://www.kag
     * `train_cls.txt`
 
 Both files can be found by downloading the imagenet-1k dataset from [kaggle](https://www.kaggle.com/c/imagenet-object-localization-challenge/overview/description). I cannot provide them due to its licence.
+
+## Run
+```python
+python run.py
+```

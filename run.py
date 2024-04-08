@@ -42,6 +42,7 @@ if __name__=="__main__":
     outfolder = os.path.join(root, "output")
     if not os.path.exists(outfolder): os.makedirs(outfolder)
 
+    print("Filtering imagenet-1k. May take some time...")
     mini_val_test_imgs = set(mini_val) | set(mini_test)
     mini_val_test_lbls = set([i.rsplit("_", -1)[0] for i in mini_val_test_imgs])
     ilsvrc_cleaned = list(filter(lambda x: not any(x.startswith(l) for l in mini_val_test_lbls), set(ilsvrc_train)))
