@@ -46,6 +46,7 @@ if __name__=="__main__":
     mini_val_test_imgs = set(mini_val) | set(mini_test)
     mini_val_test_lbls = set([i.rsplit("_", -1)[0] for i in mini_val_test_imgs])
     ilsvrc_cleaned = list(filter(lambda x: not any(x.startswith(l) for l in mini_val_test_lbls), set(ilsvrc_train)))
+    ilsvrc_cleaned_labels = set([l.split("_")[0] for l in ilsvrc_cleaned])
 
     with open(os.path.join(outfolder, "hide_images.txt"), "w") as f:
         for name in mini_val_test_imgs:
@@ -57,4 +58,8 @@ if __name__=="__main__":
 
     with open(os.path.join(outfolder, "ilsvrc_cleaned.txt"), "w") as f:
         for name in ilsvrc_cleaned:
+            f.write(f"{name}\n")
+
+    with open(os.path.join(outfolder, "ilsvrc_cleaned_labels.txt"), "w") as f:
+        for name in ilsvrc_cleaned_labels:
             f.write(f"{name}\n")

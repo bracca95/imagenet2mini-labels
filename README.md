@@ -1,8 +1,9 @@
 # Imagenet to miniimagenet labels
-The program provides three files
+The program provides four files
 1. `hide_images.txt` list of images in the val+test set of miniimagenet, 
 2. `hide_labels.txt` list of the 16+20 labels in the val+test set of miniimagenet,
 3. `ilsvrc_cleaned.txt` the imagenet-1k train set image list stripped of ALL the samples that belong to the 16+20 val+test classes of miniimagenet.
+4. `ilsvrc_cleaned_labels.txt` corresponding 964 training labels
 
 ## Motivations
 In a meta-learning/few-shot learning setting there should be no overlap between train/val/test splits. So it is important that all the classes seen during training are not seen during the test phase.
